@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,CAAC,CAAC;EACD,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;CACT",
+    "sources": [
+        "main.scss",
+        "abstracts/_variables.scss",
+        "base/_reset.scss",
+        "layout/_navbar.scss",
+        "layout/_footer.scss",
+        "pages/_home.scss",
+        "vendors/_bootstrap.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
