@@ -37,6 +37,5 @@ Semester 5 Web Development Lab Project. Hotel management system using php and my
 ## Development Dependencies
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-  - [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)
   - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [XAMPP](https://www.apachefriends.org/index.html)
