@@ -2,6 +2,11 @@
 
 Semester 5 Web Development Lab Project. Hotel management system using php and mysql.
 
+# Get started
+
+- Install dependencies - `npm install`
+- Start development server - `npm run start`
+
 ## To-do
 
 - Bootstrap templating section (no css pure bootstrap)
