@@ -30,7 +30,10 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="login.html">Log in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signup.html">Sign up</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,9 +45,6 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
             </li>
           </ul>
         </div>
@@ -64,6 +64,14 @@
               <div class="form-group">
                 <label for="check-in">Check out</label>
                 <input type="date" class="form-control" name="check-out" />
+              </div>
+              <div class="form-group">
+                <label for="count-adults">Adults</label>
+                <input type="number" class="form-control" name="count-adults" placeholder="Ages 13 or above"/>
+              </div>
+              <div class="form-group">
+                <label for="count-children">Children</label>
+                <input type="number" class="form-control" name="count-children" placeholder="Ages 1-12"/>
               </div>
               <div class="form-group">
                 <button type="submit" class="btn btn-primary" name="find-rooms">Search</button>
