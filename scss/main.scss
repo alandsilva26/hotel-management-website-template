@@ -1,0 +1,18 @@
+// imports
+
+// abstracts
+@import "abstracts/variables";
+
+// base
+@import "base/reset";
+
+// layout
+@import "layout/navbar";
+@import "layout/footer";
+
+// pages
+@import "pages/home";
+
+//vendors
+@import "vendors/bootstrap";
+@import "vendors/jquery_ui";
