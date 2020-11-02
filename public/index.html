@@ -12,95 +12,203 @@
       crossorigin="anonymous"
     />
 
+    <!-- Jquery UI theme -->
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
+    />
+
     <!-- Custom css -->
     <link rel="stylesheet" href="./css/main.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Hotel Management</title>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-md navbar-light bg-light mx-lg-5">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Log in</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="signup.html">Sign up</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      </nav>
-      <div class="wrapper">
-        <div class="container">
-          <div class="jumbotron">
-            Find best deals
+    <header id="home-header">
+      <div id="home-header--bg-image">
+        <nav class="navbar navbar-expand-md px-md-5">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#reservation-form"
+                  >Reservations</a
+                >
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-right"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <span class="dropdown-item"
+                    >Signed in as <b>lemon potter</b></span
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="login.html">Log in</a>
+                  <a class="dropdown-item" href="signup.html">Sign up</a>
+                  <a class="dropdown-item" href="signup.html">Account</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            </ul>
           </div>
-          <div id="find-available-rooms-form">
-            <form>
-              <div class="form-group">
-                <label for="check-in">Check in</label>
-                <input type="date" class="form-control" name="check-in" />
-              </div>
-              <div class="form-group">
-                <label for="check-in">Check out</label>
-                <input type="date" class="form-control" name="check-out" />
-              </div>
-              <div class="form-group">
-                <label for="count-adults">Adults</label>
-                <input type="number" class="form-control" name="count-adults" placeholder="Ages 13 or above"/>
-              </div>
-              <div class="form-group">
-                <label for="count-children">Children</label>
-                <input type="number" class="form-control" name="count-children" placeholder="Ages 1-12"/>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-primary" name="find-rooms">Search</button>
-              </div>
-            </form>
+        </nav>
+        <div class="home-header--title">
+          <div class="container p-5">
+            <h1>Find the best deals</h1>
+            <h3 id="reservation-form">for your next trip</h3>
           </div>
         </div>
       </div>
     </header>
     <main>
+      <section id="home-form">
+        <div class="wrapper">
+          <form id="find-available-rooms-form">
+            <div class="form-group">
+              <label for="check-in">Check in</label>
+              <input
+                type="hidden"
+                id="check-in"
+                class="form-control"
+                name="check-in"
+              />
+              <button id="check-in-button" class="btn input-button">
+                Check in date
+              </button>
+            </div>
+            <div class="form-group">
+              <label for="check-in">Check out</label>
+              <input
+                type="hidden"
+                id="check-out"
+                class="form-control"
+                name="check-out"
+                value=""
+              />
+              <button id="check-out-button" class="btn input-button">
+                Check out date
+              </button>
+            </div>
+            <div class="form-group">
+              <label for="form-dropdown">Guests</label>
+              <button
+                class="btn dropdown-toggle"
+                id="form-dropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Add guests
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="form-dropdown">
+                <li class="dropdown-menu-item">
+                  <div class="form-group form-group-nested">
+                    <label for="count-adults">Adults</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="count-adults"
+                      placeholder="Ages 13 or above"
+                    />
+                  </div>
+                  <div class="form-group form-group-nested">
+                    <label for="count-children">Children</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="count-children"
+                      placeholder="Ages 1-12"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary" name="find-rooms">
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
       <div class="container">
-
         <!-- Featured Rooms -->
         <section id="featured-rooms">
           <div class="section-title">
-            <h2>Rooms tailored to your needs</h2>
+            <h2>Check out our best deals</h2>
           </div>
           <div class="row">
-            <div class="col-md-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsa mollitia assumenda alias quos, dolorum fuga numquam pariatur maiores minus quo nemo doloremque vitae nobis nesciunt iusto veritatis illo veniam?
+            <div class="col col-md-4">
+              <div class="img-wrapper">
+                <img src="./media/images/rooms/room1.jpg" alt="Room photo" />
+              </div>
+              <div class="content">
+                <div class="title">Deluxe Suite</div>
+                <div class="price">$&nbsp;<span class="value">480</span></div>
+                <div class="book-room">
+                  <a href="#">Book this room</a>
+                </div>
+              </div>
             </div>
-            <div class="col-md-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsa mollitia assumenda alias quos, dolorum fuga numquam pariatur maiores minus quo nemo doloremque vitae nobis nesciunt iusto veritatis illo veniam?
+
+            <div class="col col-md-4">
+              <div class="img-wrapper">
+                <img src="./media/images/rooms/room1.jpg" alt="Room photo" />
+              </div>
+              <div class="content">
+                <div class="title">Deluxe Suite</div>
+                <div class="price">$&nbsp;<span class="value">480</span></div>
+                <div class="book-room">
+                  <a href="#">Book this room</a>
+                </div>
+              </div>
             </div>
-            <div class="col-md-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsa mollitia assumenda alias quos, dolorum fuga numquam pariatur maiores minus quo nemo doloremque vitae nobis nesciunt iusto veritatis illo veniam?
-            </div>
-            <div class="col-md-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsa mollitia assumenda alias quos, dolorum fuga numquam pariatur maiores minus quo nemo doloremque vitae nobis nesciunt iusto veritatis illo veniam?
+
+            <div class="col col-md-4">
+              <div class="img-wrapper">
+                <img src="./media/images/rooms/room1.jpg" alt="Room photo" />
+              </div>
+              <div class="content">
+                <div class="title">Deluxe Suite</div>
+                <div class="price">$&nbsp;<span class="value">480</span></div>
+                <div class="book-room">
+                  <a href="#">Book this room</a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -108,88 +216,79 @@
     </main>
 
     <!-- Footer -->
-<footer class="page-footer font-small blue pt-4">
+    <footer class="page-footer font-small blue pt-4">
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+        <!-- Grid row -->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-6 mt-md-0 mt-3">
+            <!-- Content -->
+            <h5 class="text-uppercase">Footer Content</h5>
+            <p>
+              Here you can use rows and columns to organize your footer content.
+            </p>
+          </div>
+          <!-- Grid column -->
 
-  <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-left">
+          <hr class="clearfix w-100 d-md-none pb-3" />
 
-    <!-- Grid row -->
-    <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase">Links</h5>
 
-      <!-- Grid column -->
-      <div class="col-md-6 mt-md-0 mt-3">
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
 
-        <!-- Content -->
-        <h5 class="text-uppercase">Footer Content</h5>
-        <p>Here you can use rows and columns to organize your footer content.</p>
+          <!-- Grid column -->
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h5 class="text-uppercase">Links</h5>
 
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Link 1</a>
+              </li>
+              <li>
+                <a href="#!">Link 2</a>
+              </li>
+              <li>
+                <a href="#!">Link 3</a>
+              </li>
+              <li>
+                <a href="#!">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
       </div>
-      <!-- Grid column -->
+      <!-- Footer Links -->
 
-      <hr class="clearfix w-100 d-md-none pb-3">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
-          </li>
-        </ul>
-
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2020 Copyright:
+        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
       </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-    </div>
-    <!-- Grid row -->
-
-  </div>
-  <!-- Footer Links -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
     <!-- Jquery -->
     <script
@@ -197,11 +296,89 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <!-- Bootstrap  -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./js/smooth-scroll.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".input-button").click(function () {
+          event.preventDefault();
+        });
+
+        // Check in
+
+        $("#check-in").datepicker({
+          minDate: 0,
+          numberOfMonths: [1, 2],
+          onSelect: function () {
+            // $("#check-out").datepicker("show");
+            $("#check-in-button").html($("#check-in").val());
+          },
+        });
+
+        $(".form-group:eq(0)").click(function () {
+          $("#check-in").datepicker("show");
+        });
+
+        $("#check-in-button").click(function () {
+          $("#check-in").datepicker("show");
+        });
+
+        // $("#check-in").change(function () {
+        //   $("#check-in-button").html($("#check-in").val());
+        // });
+
+        // Check out
+
+        $("#check-out").datepicker({
+          minDate: 0,
+          numberOfMonths: [1, 2],
+          onSelect: function () {
+            // $("#check-out").datepicker("show");
+            $("#check-out-button").html($("#check-out").val());
+          },
+        });
+
+        $(".form-group:eq(1)").click(function () {
+          $("#check-out").datepicker("show");
+        });
+
+        $("#check-out-button").click(function () {
+          $("#check-out").datepicker("show");
+        });
+
+        // $("#check-out").change(function () {
+        //   $("#check-out-button").html($("#check-out").val());
+        // });
+        // $("#home-header").style("color", "red !important");
+
+        parallaxScroll = () => {
+          let offset = window.pageYOffset;
+          try {
+            console.log("HELLO");
+            // $("#home-header").style("border", "1px solid red");
+            // = offset * 0.9 + "px";
+          } catch (e) {
+            console.error(e);
+          }
+        };
+
+        window.addEventListener("scroll", function () {
+          let offset = window.pageYOffset;
+          console.log(`${offset * 1}px`);
+          $("#home-header--bg-image").css(
+            "background-position-y",
+            `${offset * 0.2}px`
+          );
+        });
+      });
+    </script>
   </body>
 </html>

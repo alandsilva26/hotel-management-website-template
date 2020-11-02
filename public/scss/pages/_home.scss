@@ -1,0 +1,243 @@
+#home-header {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  #home-header--bg-image {
+    background-image: url("../media/images/home-header-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  // &::before {
+  //   content: "";
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   background-color: rgba(0, 0, 0, 0.5);
+  //   // background-image: url("../media/images/home-header-1.jpg");
+  //   // background-size: cover;
+  //   // background-position: center;
+  //   // background-repeat: no-repeat;
+  //   z-index: -1;
+  // }
+
+  .home-header--title {
+    width: 100%;
+    height: calc(100vh - #{$navbar-height});
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+
+    h1 {
+      font-weight: 700;
+      font-size: 4em;
+    }
+
+    h3 {
+      font-size: 3em;
+      opacity: 0.7;
+    }
+  }
+}
+
+#home-form {
+  // border: 1px solid red;
+  width: 100%;
+  margin-bottom: 5em;
+
+  .wrapper {
+    width: 70%;
+    height: $navbar-height;
+    margin: 0 auto;
+    margin-top: -28px;
+    // border: 1px solid blue;
+
+    #find-available-rooms-form {
+      width: 100%;
+      display: grid;
+      background: white;
+      border-radius: 2em;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      grid-template-columns: 1fr 1fr 1fr 0.8fr;
+
+      .form-group {
+        margin-bottom: 0;
+        padding: 10px;
+        padding-left: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        label {
+          display: block;
+          font-weight: 600;
+          padding: 0;
+          padding-left: 1em;
+          margin: 0;
+        }
+
+        &:nth-child(-n + 3) {
+          * {
+            cursor: pointer;
+          }
+
+          &:hover {
+            background: rgba(202, 202, 202, 0.5);
+            border-radius: 2em;
+          }
+
+          .form-group-nested:hover {
+            background: transparent;
+            cursor: default;
+          }
+
+          button.btn {
+            display: block;
+            width: 80%;
+            color: #495057;
+            text-align: start;
+            border: none;
+            padding: 0;
+            padding-left: 1em;
+          }
+
+          button:focus {
+            box-shadow: none;
+          }
+
+          button.btn::after {
+            display: none;
+          }
+
+          .dropdown-menu {
+            margin-top: 1em;
+          }
+        }
+
+        // &:nth-last-child(2) {
+        //   button.btn {
+        //     color: #495057;
+        //     text-align: start;
+        //   }
+        //   button.btn::after {
+        //     display: none;
+        //   }
+        // }
+
+        &:last-child {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          button.btn[type="submit"] {
+            width: 95%;
+            height: 95%;
+            border: none;
+            border-radius: 2em;
+            background: linear-gradient(45deg, rgb(190, 8, 84), red);
+          }
+        }
+      }
+    }
+  }
+}
+
+#featured-rooms {
+  .col {
+    margin: 1em 0em;
+    transition: transform 0.15s ease-in;
+    transform: scale(1);
+  }
+
+  .col:hover {
+    transition: transform 0.15s ease-in;
+    transform: scale(1.008);
+    .img-wrapper {
+      // box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .img-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .img-wrapper::before {
+    content: "";
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 70%, transparent);
+  }
+
+  // .img-wrapper::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: -15%;
+  //   right: -15%;
+  //   width: 50%;
+  //   height: 50%;
+  //   background: rgba(255, 255, 255, 0.9);
+  //   transform: skew(-20deg);
+  //   z-index: 2;
+  // }
+
+  .content {
+    .title {
+      position: absolute;
+      bottom: 10%;
+      left: 10%;
+
+      // Decoration
+      color: white;
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+
+    .price {
+      position: absolute;
+      // top: 5%;
+      right: 10%;
+
+      bottom: 10%;
+      right: 10%;
+      z-index: 2;
+
+      // Decoration
+      background: -webkit-linear-gradient(rgb(190, 8, 84), rgb(243, 100, 183));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2em;
+      font-weight: 800;
+    }
+
+    .book-room {
+      display: none;
+    }
+  }
+}
+
+.section-title {
+  h2 {
+    color: rgb(31, 31, 31);
+    font-size: 3em;
+    font-weight: 800;
+  }
+}

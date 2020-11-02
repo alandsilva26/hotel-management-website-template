@@ -1,3 +1,184 @@
 * {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: "Lato", sans-serif; }
+
+body {
+  background: whitesmoke; }
+
+nav {
+  width: 100%;
+  height: 58px;
+  margin: 0px; }
+
+a.nav-link {
+  color: white; }
+
+#home-header {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); }
+  #home-header #home-header--bg-image {
+    background-image: url("../media/images/home-header-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  #home-header .home-header--title {
+    width: 100%;
+    height: calc(100vh - 58px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white; }
+    #home-header .home-header--title h1 {
+      font-weight: 700;
+      font-size: 4em; }
+    #home-header .home-header--title h3 {
+      font-size: 3em;
+      opacity: 0.7; }
+
+#home-form {
+  width: 100%;
+  margin-bottom: 5em; }
+  #home-form .wrapper {
+    width: 70%;
+    height: 58px;
+    margin: 0 auto;
+    margin-top: -28px; }
+    #home-form .wrapper #find-available-rooms-form {
+      width: 100%;
+      display: grid;
+      background: white;
+      border-radius: 2em;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      grid-template-columns: 1fr 1fr 1fr 0.8fr; }
+      #home-form .wrapper #find-available-rooms-form .form-group {
+        margin-bottom: 0;
+        padding: 10px;
+        padding-left: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        #home-form .wrapper #find-available-rooms-form .form-group label {
+          display: block;
+          font-weight: 600;
+          padding: 0;
+          padding-left: 1em;
+          margin: 0; }
+        #home-form .wrapper #find-available-rooms-form .form-group:nth-child(-n + 3) * {
+          cursor: pointer; }
+        #home-form .wrapper #find-available-rooms-form .form-group:nth-child(-n + 3):hover {
+          background: rgba(202, 202, 202, 0.5);
+          border-radius: 2em; }
+        #home-form .wrapper #find-available-rooms-form .form-group:nth-child(-n + 3) .form-group-nested:hover {
+          background: transparent;
+          cursor: default; }
+        #home-form .wrapper #find-available-rooms-form .form-group:nth-child(-n + 3) button.btn {
+          display: block;
+          width: 80%;
+          color: #495057;
+          text-align: start;
+          border: none;
+          padding: 0;
+          padding-left: 1em; }
+        #home-form .wrapper #find-available-rooms-form .form-group:nth-child(-n + 3) button:focus {
+          box-shadow: none; }
+        #home-form .wrapper #find-available-rooms-form .form-group:nth-child(-n + 3) button.btn::after {
+          display: none; }
+        #home-form .wrapper #find-available-rooms-form .form-group:nth-child(-n + 3) .dropdown-menu {
+          margin-top: 1em; }
+        #home-form .wrapper #find-available-rooms-form .form-group:last-child {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          #home-form .wrapper #find-available-rooms-form .form-group:last-child button.btn[type="submit"] {
+            width: 95%;
+            height: 95%;
+            border: none;
+            border-radius: 2em;
+            background: linear-gradient(45deg, #be0854, red); }
+
+#featured-rooms .col {
+  margin: 1em 0em;
+  transition: transform 0.15s ease-in;
+  transform: scale(1); }
+
+#featured-rooms .col:hover {
+  transition: transform 0.15s ease-in;
+  transform: scale(1.008); }
+
+#featured-rooms .img-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  position: relative; }
+  #featured-rooms .img-wrapper img {
+    width: 100%;
+    height: 100%; }
+
+#featured-rooms .img-wrapper::before {
+  content: "";
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 70%, transparent); }
+
+#featured-rooms .content .title {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 500; }
+
+#featured-rooms .content .price {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  right: 10%;
+  z-index: 2;
+  background: -webkit-linear-gradient(#be0854, #f364b7);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2em;
+  font-weight: 800; }
+
+#featured-rooms .content .book-room {
+  display: none; }
+
+.section-title h2 {
+  color: #1f1f1f;
+  font-size: 3em;
+  font-weight: 800; }
+
+#ui-datepicker-div {
+  padding: 2em !important;
+  border-radius: 2em !important;
+  margin-top: 2em !important; }
+
+#ui-datepicker-div {
+  z-index: 2000; }
+
+thead > tr span {
+  font-weight: normal;
+  font-size: small;
+  color: grey; }
+
+.ui-datepicker-header {
+  border: none !important;
+  background: transparent !important; }
+
+a.ui-state-default {
+  border: 1px solid transparent !important;
+  background: transparent !important; }
+
+a.ui-state-default:hover {
+  border: 1px solid black !important; }
+
+span.ui-state-default {
+  border: none !important; }
