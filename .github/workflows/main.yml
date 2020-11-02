@@ -2,8 +2,6 @@ name: Deploy static files to github pages
 on:
   push:
     branches: [master]
-    paths:
-      - "public/**"
 
 jobs:
   build:
