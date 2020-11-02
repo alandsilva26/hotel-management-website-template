@@ -1,4 +1,4 @@
-# hotel-management-php
+# hotel-management-php ![Deploy static files to github pages](https://github.com/alandsilva26/hotel-management-php/workflows/Deploy%20static%20files%20to%20github%20pages/badge.svg)
 
 Semester 5 Web Development Lab Project. Hotel management system using php and mysql.
 Testing workflow
