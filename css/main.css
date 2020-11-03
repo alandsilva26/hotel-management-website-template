@@ -14,6 +14,122 @@ nav {
 a.nav-link {
   color: white; }
 
+.auth--wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-image: url("../media/images/backgrounds/login-bg-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .auth--wrapper nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4; }
+  .auth--wrapper .bg-image {
+    padding: 58px;
+    padding-top: 5em; }
+    .auth--wrapper .bg-image span {
+      display: block;
+      width: 80%;
+      font-size: 2.5em;
+      font-weight: 700;
+      color: white; }
+  .auth--wrapper .form-wrapper {
+    background: white;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    padding-top: 58px; }
+    .auth--wrapper .form-wrapper .form-card {
+      width: 65%;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; }
+      .auth--wrapper .form-wrapper .form-card h2 {
+        text-align: center;
+        margin: 1em 0em 1em 0em;
+        font-weight: 700; }
+      .auth--wrapper .form-wrapper .form-card .group {
+        position: relative; }
+        .auth--wrapper .form-wrapper .form-card .group button.btn {
+          display: block;
+          width: 100%;
+          height: 50px;
+          border-radius: 3em;
+          font-size: large;
+          font-weight: 600;
+          color: rgba(0, 0, 0, 0.8);
+          background: white;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07);
+          transition: 0.15s ease-in; }
+        .auth--wrapper .form-wrapper .form-card .group img {
+          display: block;
+          height: 30px;
+          position: absolute;
+          top: 10px;
+          left: 10px; }
+      .auth--wrapper .form-wrapper .form-card h5 {
+        color: grey;
+        text-align: center;
+        margin-top: 1em; }
+      .auth--wrapper .form-wrapper .form-card .form .form-group label {
+        margin: 15px 0;
+        display: none; }
+      .auth--wrapper .form-wrapper .form-card .form .form-group .form-control {
+        height: 50px;
+        border-radius: 3em;
+        padding: 20px;
+        margin: 1em 0;
+        font-size: large;
+        font-weight: bold;
+        color: black; }
+      .auth--wrapper .form-wrapper .form-card .form .form-group .form-control:focus {
+        border: 3px solid #be0854;
+        box-shadow: none; }
+      .auth--wrapper .form-wrapper .form-card .form .form-group .step {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1em; }
+        .auth--wrapper .form-wrapper .form-card .form .form-group .step .btn {
+          display: block;
+          width: 100%;
+          height: 50px;
+          border-radius: 3em;
+          margin: 1.5em 0;
+          font-size: larger;
+          border: 3px solid #be0854; }
+        .auth--wrapper .form-wrapper .form-card .form .form-group .step .btn:nth-child(2) {
+          color: white;
+          background: linear-gradient(45deg, #be0854, red);
+          border: none; }
+      .auth--wrapper .form-wrapper .form-card .form .form-group button[type="submit"] {
+        display: block;
+        width: 100%;
+        height: 50px;
+        border-radius: 3em;
+        margin: 1.5em 0;
+        background: linear-gradient(45deg, #be0854, red);
+        border: none;
+        color: white;
+        font-size: larger; }
+      .auth--wrapper .form-wrapper .form-card .btn:focus {
+        box-shadow: none;
+        outline: none; }
+      .auth--wrapper .form-wrapper .form-card button:hover,
+      .auth--wrapper .form-wrapper .form-card .btn:hover {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07);
+        transition: 0.15s ease-in; }
+  .auth--wrapper .alternate-auth {
+    font-size: large;
+    font-weight: 600;
+    color: #495057; }
+    .auth--wrapper .alternate-auth a {
+      color: green; }
+
 #home-header {
   width: 100%;
   height: 100vh;
@@ -156,88 +272,47 @@ a.nav-link {
   font-size: 3em;
   font-weight: 800; }
 
-#login-form .wrapper {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-image: url("../media/images/backgrounds/login-bg-1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-  #login-form .wrapper nav {
+#signup-form .form-progress {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #signup-form .form-progress span {
+    margin-bottom: 30px; }
+  #signup-form .form-progress .form-progress-item,
+  #signup-form .form-progress .form-progress-item--divider {
+    border: 3px solid #be0854;
+    border-radius: 3em;
+    padding: 0.4em;
+    background: rgba(255, 255, 255, 0.7);
+    color: #be0854;
+    position: relative; }
+  #signup-form .form-progress .form-progress-item {
+    width: 40%;
+    text-align: center;
+    font-size: large;
+    font-weight: bold; }
+  #signup-form .form-progress .form-progress-item--divider {
+    width: 30px;
+    height: 30px; }
+  #signup-form .form-progress hr {
+    min-height: 50px;
+    width: 3px;
+    background: #be0854;
+    margin: 0; }
+  #signup-form .form-progress .complete {
+    background: #be0854 !important;
+    color: white; }
+  #signup-form .form-progress .fa {
+    color: white;
     position: absolute;
+    right: 0;
     top: 0;
-    left: 0;
-    z-index: 4; }
-  #login-form .wrapper .bg-image {
-    padding: 58px;
-    padding-top: 5em; }
-    #login-form .wrapper .bg-image span {
-      display: block;
-      width: 80%;
-      font-size: 2.5em;
-      font-weight: 700;
-      color: white; }
-  #login-form .wrapper .form-wrapper {
-    background: white;
-    border-radius: 0px;
-    width: 100%;
-    height: 100%;
-    padding-top: 58px; }
-    #login-form .wrapper .form-wrapper .form-card {
-      width: 65%;
-      height: 100%;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start; }
-      #login-form .wrapper .form-wrapper .form-card h2 {
-        text-align: center;
-        margin: 1em 0em 1em 0em;
-        font-weight: 700; }
-      #login-form .wrapper .form-wrapper .form-card .group {
-        position: relative; }
-        #login-form .wrapper .form-wrapper .form-card .group button.btn {
-          display: block;
-          width: 100%;
-          height: 50px;
-          border-radius: 3em;
-          font-size: large;
-          background: white;
-          box-shadow: 1px 1px 8px #7c7c7c; }
-        #login-form .wrapper .form-wrapper .form-card .group img {
-          display: block;
-          height: 30px;
-          position: absolute;
-          top: 10px;
-          left: 10px; }
-      #login-form .wrapper .form-wrapper .form-card h5 {
-        color: grey;
-        text-align: center;
-        margin-top: 1em; }
-      #login-form .wrapper .form-wrapper .form-card .form .form-group label {
-        margin: 15px 0;
-        display: none; }
-      #login-form .wrapper .form-wrapper .form-card .form .form-group .form-control {
-        height: 50px;
-        border-radius: 3em;
-        padding: 20px;
-        margin: 1em 0;
-        font-size: large;
-        font-weight: bold;
-        color: black; }
-      #login-form .wrapper .form-wrapper .form-card .form .form-group .form-control:focus {
-        border: 3px solid #be0854;
-        box-shadow: none; }
-      #login-form .wrapper .form-wrapper .form-card .form .form-group button[type="submit"] {
-        display: block;
-        width: 100%;
-        height: 50px;
-        border-radius: 3em;
-        margin: 1.5em 0;
-        background: linear-gradient(45deg, #be0854, red);
-        color: white;
-        font-size: larger; }
+    bottom: 0;
+    vertical-align: middle;
+    height: 100%; }
 
 #ui-datepicker-div {
   padding: 2em !important;
@@ -246,6 +321,12 @@ a.nav-link {
 
 #ui-datepicker-div {
   z-index: 2000; }
+
+.ui-datepicker-month {
+  font-size: small !important; }
+
+.ui-datepicker-year {
+  font-size: small !important; }
 
 thead > tr span {
   font-weight: normal;

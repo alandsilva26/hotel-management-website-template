@@ -9,10 +9,12 @@
 // layout
 @import "layout/navbar";
 @import "layout/footer";
+@import "layout/forms";
 
 // pages
 @import "pages/home";
 @import "pages/login";
+@import "pages/signup";
 
 //vendors
 @import "vendors/bootstrap";
