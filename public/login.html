@@ -17,8 +17,8 @@
   </head>
   <body>
     <!-- Form Section -->
-    <section id="login-form">
-      <div class="wrapper">
+    <section id="auth-form">
+      <div class="auth--wrapper">
         <nav class="navbar navbar-expand-md px-md-5">
           <a class="navbar-brand" href="#">Navbar</a>
           <button
@@ -75,9 +75,9 @@
         </nav>
 
         <div class="bg-image">
-          <span
-            >Enjoy personalized recommendations, discounts and much more</span
-          >
+          <span>
+            Enjoy personalized recommendations, discounts and much more
+          </span>
         </div>
         <div class="form-wrapper">
           <div class="form-card">
@@ -99,7 +99,7 @@
             </div>
 
             <h5><span class="small">or sign in with email</span></h5>
-            <form action="post" class="form">
+            <form action="" method="post" class="form">
               <div class="form-group">
                 <label for="email">Email</label>
                 <input
@@ -108,6 +108,10 @@
                   placeholder="Enter your email"
                   class="form-control"
                 />
+                <!-- is-invalid add this class along with form-control -->
+                <!-- <small id="passwordHelp" class="text-danger">
+                  Must be 8-20 characters long.
+                </small> -->
               </div>
               <div class="form-group">
                 <label for="password">Password</label>
@@ -122,6 +126,13 @@
                 <button type="submit" name="login-user" class="btn">
                   Log in
                 </button>
+              </div>
+
+              <div class="alternate-auth">
+                <span>
+                  Don't have an account?
+                  <a href="./signup.html">&nbsp;Sign up instead</a>
+                </span>
               </div>
             </form>
           </div>
