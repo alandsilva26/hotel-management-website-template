@@ -144,6 +144,51 @@ a.nav-link {
     .banner .jumbotron h2 {
       font-size: 2.5; }
 
+.custom-room-cards .card {
+  background: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07);
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px; }
+  .custom-room-cards .card .card-body {
+    padding: 0;
+    height: 150px; }
+    .custom-room-cards .card .card-body img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px; }
+  .custom-room-cards .card .card-footer {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    border: none; }
+    .custom-room-cards .card .card-footer div {
+      padding: 2px 0; }
+    .custom-room-cards .card .card-footer .footer-head {
+      display: flex;
+      justify-content: space-between; }
+      .custom-room-cards .card .card-footer .footer-head .label {
+        color: #be0854; }
+    .custom-room-cards .card .card-footer .footer-body {
+      color: rgba(0, 0, 0, 0.8);
+      font-weight: bolder; }
+
+.custom-room-cards .col:nth-child(1) .card {
+  margin-top: 0px; }
+
+.custom-room-cards .col:nth-child(2) .card {
+  margin-top: 20px; }
+
+.custom-room-cards .col:nth-child(3) .card {
+  margin-top: 40px; }
+
+.custom-room-cards .col:nth-child(4) .card {
+  margin-top: -20px; }
+
 #admin-header .navbar {
   height: 58px;
   border-bottom: 1px solid black; }
@@ -248,62 +293,10 @@ a.nav-link {
             border-radius: 2em;
             background: linear-gradient(45deg, #be0854, red); }
 
-#featured-rooms .col {
-  margin: 1em 0em;
-  transition: transform 0.15s ease-in;
-  transform: scale(1); }
-
-#featured-rooms .col:hover {
-  transition: transform 0.15s ease-in;
-  transform: scale(1.008); }
-
-#featured-rooms .img-wrapper {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 4px;
-  position: relative; }
-  #featured-rooms .img-wrapper img {
-    width: 100%;
-    height: 100%; }
-
-#featured-rooms .img-wrapper::before {
-  content: "";
-  width: 100%;
-  height: 50%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 70%, transparent); }
-
-#featured-rooms .content .title {
-  position: absolute;
-  bottom: 10%;
-  left: 10%;
-  color: white;
-  font-size: 1.5em;
-  font-weight: 500; }
-
-#featured-rooms .content .price {
-  position: absolute;
-  right: 10%;
-  bottom: 10%;
-  right: 10%;
-  z-index: 2;
-  background: -webkit-linear-gradient(#be0854, #f364b7);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2em;
-  font-weight: 800; }
-
-#featured-rooms .content .book-room {
-  display: none; }
-
 .section-title h2 {
-  color: #1f1f1f;
   font-size: 3em;
-  font-weight: 800; }
+  font-weight: 800;
+  margin-bottom: 0.5em; }
 
 #decoration-accomodation .row .content {
   height: 100%;
@@ -311,7 +304,7 @@ a.nav-link {
   flex-direction: column;
   justify-content: center; }
   #decoration-accomodation .row .content h2 {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 800; }
   #decoration-accomodation .row .content p {
     color: rgba(0, 0, 0, 0.6);
@@ -344,6 +337,65 @@ a.nav-link {
       font-weight: bold;
       text-align: center;
       border: none; }
+
+#premium-section .row .content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  #premium-section .row .content p {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold; }
+
+#premium-section .row .card-container {
+  padding: 0 2em;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 3em; }
+  #premium-section .row .card-container .card {
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07);
+    border: none;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    border-radius: 0px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px; }
+    #premium-section .row .card-container .card .card-body {
+      padding: 0;
+      height: 150px; }
+      #premium-section .row .card-container .card .card-body img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px; }
+    #premium-section .row .card-container .card .card-footer {
+      color: rgba(0, 0, 0, 0.6);
+      font-weight: bold;
+      border: none; }
+      #premium-section .row .card-container .card .card-footer div {
+        padding: 2px 0; }
+      #premium-section .row .card-container .card .card-footer .footer-head {
+        display: flex;
+        justify-content: space-between; }
+        #premium-section .row .card-container .card .card-footer .footer-head .label {
+          color: #be0854; }
+      #premium-section .row .card-container .card .card-footer .footer-body {
+        color: rgba(0, 0, 0, 0.8);
+        font-weight: bolder; }
+    #premium-section .row .card-container .card:nth-child(1) {
+      grid-row-start: 1;
+      grid-column-start: 1;
+      grid-row-end: 4;
+      grid-column-end: 4; }
+    #premium-section .row .card-container .card:nth-child(2) {
+      grid-row-start: 3;
+      grid-column-start: 4;
+      grid-row-end: 6;
+      grid-column-end: 7; }
 
 #signup-form .form-progress {
   width: 100%;
