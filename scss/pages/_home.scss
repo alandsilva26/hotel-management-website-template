@@ -148,7 +148,29 @@
   }
 }
 
-// #featured-rooms {
+#featured-rooms {
+  .col:nth-child(1) {
+    .card {
+      margin-top: 0px;
+    }
+  }
+
+  .col:nth-child(2) {
+    .card {
+      margin-top: 20px;
+    }
+  }
+  .col:nth-child(3) {
+    .card {
+      margin-top: 40px;
+    }
+  }
+  .col:nth-child(4) {
+    .card {
+      margin-top: -20px;
+    }
+  }
+}
 //   .col {
 //     margin: 1em 0em;
 //     transition: transform 0.15s ease-in;
@@ -233,14 +255,6 @@
 //     }
 //   }
 // }
-
-.section-title {
-  h2 {
-    font-size: 3em;
-    font-weight: 800;
-    margin-bottom: 0.5em;
-  }
-}
 
 #decoration-accomodation {
   .row {

@@ -6,6 +6,16 @@
 body {
   background: whitesmoke; }
 
+#admin-main {
+  margin-top: 58px;
+  margin-left: 250px;
+  width: calc(100vw - 250px); }
+
+.section-title h2 {
+  font-size: 3em;
+  font-weight: 800;
+  margin-bottom: 0.5em; }
+
 nav {
   width: 100%;
   height: 58px;
@@ -154,8 +164,7 @@ a.nav-link {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px; }
   .custom-room-cards .card .card-body {
-    padding: 0;
-    height: 150px; }
+    padding: 0; }
     .custom-room-cards .card .card-body img {
       width: 100%;
       height: 100%;
@@ -177,21 +186,29 @@ a.nav-link {
       color: rgba(0, 0, 0, 0.8);
       font-weight: bolder; }
 
-.custom-room-cards .col:nth-child(1) .card {
-  margin-top: 0px; }
-
-.custom-room-cards .col:nth-child(2) .card {
-  margin-top: 20px; }
-
-.custom-room-cards .col:nth-child(3) .card {
-  margin-top: 40px; }
-
-.custom-room-cards .col:nth-child(4) .card {
-  margin-top: -20px; }
+.custom-room-cards .card-expanded {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 0px; }
+  .custom-room-cards .card-expanded .card-body img {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: calc(15px); }
+  .custom-room-cards .card-expanded .detail {
+    font-weight: bold;
+    padding: 1.5em; }
+    .custom-room-cards .card-expanded .detail ul li {
+      color: rgba(0, 0, 0, 0.6); }
+      .custom-room-cards .card-expanded .detail ul li span {
+        color: rgba(0, 0, 0, 0.8); }
 
 #admin-header .navbar {
   height: 58px;
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  left: 0; }
   #admin-header .navbar .nav-item .nav-link {
     color: #d6d6d6; }
   #admin-header .navbar .navbar-collapse {
@@ -293,10 +310,17 @@ a.nav-link {
             border-radius: 2em;
             background: linear-gradient(45deg, #be0854, red); }
 
-.section-title h2 {
-  font-size: 3em;
-  font-weight: 800;
-  margin-bottom: 0.5em; }
+#featured-rooms .col:nth-child(1) .card {
+  margin-top: 0px; }
+
+#featured-rooms .col:nth-child(2) .card {
+  margin-top: 20px; }
+
+#featured-rooms .col:nth-child(3) .card {
+  margin-top: 40px; }
+
+#featured-rooms .col:nth-child(4) .card {
+  margin-top: -20px; }
 
 #decoration-accomodation .row .content {
   height: 100%;
@@ -438,6 +462,21 @@ a.nav-link {
     bottom: 0;
     vertical-align: middle;
     height: 100%; }
+
+.row > div {
+  margin-bottom: 1em; }
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: 0.5em; }
 
 #ui-datepicker-div {
   padding: 2em !important;

@@ -1,45 +1,37 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Rooms</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap css -->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
     />
+
+    <!-- Jquery UI theme -->
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <style>
-      img {
-        width: 300px; /* You can set the dimensions to whatever you want */
-        height: 400px;
-        object-fit: fill;
-      }
-
-      /* .container{
-        display: flex;
-        grid-column-gap: 10px;
-
-      } */
-
-      .row{
-        justify-content: space-around !important;
-        
-      }
-
-      .card{
-        border: 1px solid #c9c9c9;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
-      }
-      
-    </style>
     <header>
       <nav class="navbar navbar-expand-md px-md-5 bg-dark">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -67,7 +59,7 @@
                 >Reservations</a
               >
             </li>
-  
+
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -99,124 +91,75 @@
         </div>
       </nav>
     </header>
-    <div class="mt-5">
-      <h1 align="center">Rooms & Suites</h1>
-    </div>
-
-    <div class="container-sm " align="center">
-      <p>
-        The hotel is arranged on three floors, without a lift. On the ground
-        floor, apart from the reception, there is a comfortable lounge where you
-        can sit and drink tea.
-      </p>
-    </div>
-    <div class="container-md ">
-      <div class="row mb-4 ">
-        <div class="card col-md-5 "  >
-          <img class="card-img-top" src="..." alt="Rooms" />
-          <div class="card-body">
-            <h5 class="card-title">Superior Double Room</h5>
-            <p class="card-text">
-              <ul>
-                <li>Adults: 2</li>
-                <li>View: swimming pool</li>
-                <li>Size: 30m²</li>
-                <li>Bed Type: queen bed</li>
-                <li>Categories: double</li>
-                <li>
-                  Amenities: air-conditioning, free wi-fi, hairdryer, in-room
-                  safety, laundry, minibar, telephone
-                </li>
-              </ul>
-            </p>
-            <a href="#" class="btn btn-success">Book</a>
-          </div>
-        </div>
-        <div class="card col-md-5 mb-2 ">
-          <img class="card-img-top" src="..." alt="Rooms" />
-          <div class="card-body">
-            <h5 class="card-title">Superior Double Room</h5>
-            <p class="card-text">
-              <ul>
-                <li>Adults: 2</li>
-                <li>View: swimming pool</li>
-                <li>Size: 30m²</li>
-                <li>Bed Type: queen bed</li>
-                <li>Categories: double</li>
-                <li>
-                  Amenities: air-conditioning, free wi-fi, hairdryer, in-room
-                  safety, laundry, minibar, telephone
-                </li>
-              </ul>
-            </p>
-            <a href="#" class="btn btn-success">Book</a>
-          </div>
-        </div>
+    <div class="container my-5">
+      <div class="section-title">
+        <h2>Our finest collection of rooms</h2>
       </div>
-      <div class="row ">
-        <div class="card col-md-5">
-          <img class="card-img-top" src="..." alt="Rooms" />
-          <div class="card-body">
-            <h5 class="card-title">Superior Double Room</h5>
-            <p class="card-text">
-              <ul>
-                <li>Adults: 2</li>
-                <li>View: swimming pool</li>
-                <li>Size: 30m²</li>
-                <li>Bed Type: queen bed</li>
-                <li>Categories: double</li>
+      <div class="row custom-room-cards">
+        <!-- Room element start -->
+        <div class="col-md-6">
+          <div class="card card-expanded">
+            <div class="basic">
+              <div class="card-body">
+                <img src="./media/images/backgrounds/home-2.jpg" alt="" />
+              </div>
+              <div class="card-footer">
+                <div class="footer-head">
+                  <div class="label">Premium</div>
+                  <div class="price">$120/day</div>
+                </div>
+                <div class="footer-body">Daimond Suite</div>
+                <!-- <div class="footer-foot">lemon</div> -->
+              </div>
+            </div>
+            <div class="detail">
+              <ul class="list-group list-unstyled">
+                <li><span>View:&nbsp;</span>beach</li>
+                <li><span>Bed type:&nbsp;</span>Normal</li>
+                <li><span>Adults:&nbsp;</span>2</li>
+                <li><span>Children:&nbsp;</span>2</li>
                 <li>
-                  Amenities: air-conditioning, free wi-fi, hairdryer, in-room
-                  safety, laundry, minibar, telephone
+                  <span>Amenities:&nbsp;</span>air-conditioning, free wi-fi,
+                  hairdryer, in-room safety, laundry, minibar, telephone
                 </li>
               </ul>
-            </p>
-            <a href="#" class="btn btn-success">Book</a>
+            </div>
           </div>
         </div>
-        <div class="card col-md-5">
-          <img class="card-img-top" src="..." alt="Rooms" />
-          <div class="card-body">
-            <h5 class="card-title">Superior Double Room</h5>
-            <p class="card-text">
-              <ul>
-                <li>Adults: 2</li>
-                <li>View: swimming pool</li>
-                <li>Size: 30m²</li>
-                <li>Bed Type: queen bed</li>
-                <li>Categories: double</li>
-                <li>
-                  Amenities: air-conditioning, free wi-fi, hairdryer, in-room
-                  safety, laundry, minibar, telephone
-                </li>
-              </ul>
-            </p>
-            <a href="#" class="btn btn-success">Book</a>
-          </div>
-        </div>
-      </div>  
-      </div> 
-    </div>
+        <!-- Room element end -->
 
-    <footer>
-      <div class="jumbotron jumbotron-fluid bg-grey mt-4">
-        <div class="row">
-          <div class="col-md-3">
-            <p>Payment Methods</p>
-          </div>
-          <div class="col-md-3">
-            <p>Customers</p>
-          </div>
-          <div class="col-md-3">
-            <p>Recent News</p>
-          </div>
-          <div class="col-md-3">
-            <p>Contact Us</p>
+        <!-- Room element start -->
+        <div class="col-md-6">
+          <div class="card card-expanded">
+            <div class="basic">
+              <div class="card-body">
+                <img src="./media/images/backgrounds/home-1.jpg" alt="" />
+              </div>
+              <div class="card-footer">
+                <div class="footer-head">
+                  <div class="label">Premium</div>
+                  <div class="price">$120/day</div>
+                </div>
+                <div class="footer-body">Daimond Suite</div>
+                <!-- <div class="footer-foot">lemon</div> -->
+              </div>
+            </div>
+            <div class="detail">
+              <ul class="list-group list-unstyled">
+                <li><span>View:&nbsp;</span>beach</li>
+                <li><span>Bed type:&nbsp;</span>Normal</li>
+                <li><span>Adults:&nbsp;</span>2</li>
+                <li><span>Children:&nbsp;</span>2</li>
+                <li>
+                  <span>Amenities:&nbsp;</span>air-conditioning, free wi-fi,
+                  hairdryer, in-room safety, laundry, minibar, telephone
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+        <!-- Room element end -->
       </div>
-      <p>Luvíana © 2020 All Rights Reserved</p>
-    </footer>
-  
+    </div>
   </body>
 </html>
