@@ -1,3 +1,5 @@
+$room-card-border-radius: 12px;
+
 .custom-room-cards {
   .card {
     background: white;
@@ -7,19 +9,18 @@
     width: 100%;
     height: 100%;
     border-radius: 0px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-top-left-radius: $room-card-border-radius;
+    border-top-right-radius: $room-card-border-radius;
 
     .card-body {
       padding: 0;
-      height: 150px;
 
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+        border-top-left-radius: $room-card-border-radius;
+        border-top-right-radius: $room-card-border-radius;
       }
     }
 
@@ -49,25 +50,34 @@
     }
   }
 
-  .col:nth-child(1) {
-    .card {
-      margin-top: 0px;
-    }
-  }
+  .card-expanded {
+    $room-card-border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // grid-column-gap: 1.5em;
+    border-top-left-radius: $room-card-border-radius;
+    border-top-right-radius: 0px;
 
-  .col:nth-child(2) {
-    .card {
-      margin-top: 20px;
+    .card-body {
+      img {
+        border-top-left-radius: $room-card-border-radius;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: calc(#{$room-card-border-radius / 2});
+      }
     }
-  }
-  .col:nth-child(3) {
-    .card {
-      margin-top: 40px;
-    }
-  }
-  .col:nth-child(4) {
-    .card {
-      margin-top: -20px;
+
+    .detail {
+      font-weight: bold;
+      padding: 1.5em;
+
+      ul {
+        li {
+          span {
+            color: rgba(0, 0, 0, 0.8);
+          }
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
     }
   }
 }

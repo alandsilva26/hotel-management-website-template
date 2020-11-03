@@ -7,3 +7,9 @@
 body {
   background: whitesmoke;
 }
+
+#admin-main {
+  margin-top: $navbar-height;
+  margin-left: $side-nav-width;
+  width: calc(100vw - #{$side-nav-width});
+}

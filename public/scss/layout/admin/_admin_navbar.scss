@@ -2,6 +2,9 @@
   .navbar {
     height: $navbar-height;
     border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    left: 0;
 
     .nav-item {
       .nav-link {
