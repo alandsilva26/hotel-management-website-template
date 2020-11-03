@@ -130,6 +130,39 @@ a.nav-link {
     .auth--wrapper .alternate-auth a {
       color: green; }
 
+.banner {
+  background: #be0854;
+  margin: 1em 0em;
+  margin-top: 5em;
+  box-shadow: 0px 1px 2px rgba(190, 8, 84, 0.2), 0px 2px 4px rgba(190, 8, 84, 0.2), 0px 4px 8px rgba(190, 8, 84, 0.2), 0px 8px 16px rgba(190, 8, 84, 0.2), 0px 16px 32px rgba(190, 8, 84, 0.2), 0px 32px 64px rgba(190, 8, 84, 0.2); }
+  .banner .jumbotron {
+    background: transparent;
+    color: white;
+    padding: 4em 0em; }
+    .banner .jumbotron h6 {
+      color: rgba(184, 184, 184, 0.993); }
+    .banner .jumbotron h2 {
+      font-size: 2.5; }
+
+#admin-header .navbar {
+  height: 58px;
+  border-bottom: 1px solid black; }
+  #admin-header .navbar .nav-item .nav-link {
+    color: #d6d6d6; }
+  #admin-header .navbar .navbar-collapse {
+    padding: 0.5em; }
+
+@media screen and (min-width: 576px) {
+  #admin-header .side-nav {
+    position: fixed;
+    top: 58px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 58px);
+    flex-direction: column; }
+    #admin-header .side-nav .nav-item {
+      margin: 0.5em; } }
+
 #home-header {
   width: 100%;
   height: 100vh;
@@ -271,6 +304,17 @@ a.nav-link {
   color: #1f1f1f;
   font-size: 3em;
   font-weight: 800; }
+
+#decoration-accomodation h2 {
+  font-size: 2em;
+  font-weight: 800; }
+
+#decoration-accomodation .row .card-container {
+  display: flex; }
+  #decoration-accomodation .row .card-container .card {
+    margin: 10px; }
+    #decoration-accomodation .row .card-container .card img {
+      width: 100%; }
 
 #signup-form .form-progress {
   width: 100%;
