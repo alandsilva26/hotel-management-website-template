@@ -10,11 +10,14 @@
 @import "layout/navbar";
 @import "layout/footer";
 @import "layout/forms";
+@import "layout/banner";
+@import "layout/admin/admin_navbar";
 
 // pages
 @import "pages/home";
 @import "pages/login";
 @import "pages/signup";
+@import "pages/admin/admin_index";
 
 //vendors
 @import "vendors/bootstrap";

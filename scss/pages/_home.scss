@@ -241,3 +241,24 @@
     font-weight: 800;
   }
 }
+
+#decoration-accomodation {
+  h2 {
+    font-size: 2em;
+    font-weight: 800;
+  }
+
+  .row {
+    .card-container {
+      display: flex;
+
+      .card {
+        margin: 10px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
