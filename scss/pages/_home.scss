@@ -396,6 +396,22 @@
           grid-row-end: 6;
           grid-column-end: 7;
         }
+
+        // &:nth-child(3) {
+        //   grid-row-start: 1;
+        //   grid-column-start: 3;
+        //   grid-row-end: 4;
+        //   grid-column-end: 6;
+        //   z-index: -1;
+        //   margin-top: -30px;
+        //   background: transparent;
+        //   background-image: radial-gradient(
+        //     rgba(0, 0, 0, 0.6) 3px,
+        //     transparent 0
+        //   );
+        //   background-size: 40px 40px;
+        //   // background-position: -19px -19px;
+        // }
       }
     }
   }
