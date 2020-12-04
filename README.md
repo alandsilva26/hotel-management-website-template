@@ -1,5 +1,6 @@
 # hotel-management-php ![Deploy static files to github pages](https://github.com/alandsilva26/hotel-management-php/workflows/Deploy%20static%20files%20to%20github%20pages/badge.svg)
 
+## Note: This website is just a static template which is implemented [here](https://github.com/alandsila26/hotel-management-php)
 Semester 5 Web Development Lab Project. Hotel management system using php and mysql.
 Testing workflow
 
@@ -12,20 +13,15 @@ Testing workflow
 
 - Bootstrap templating section (no css pure bootstrap)
 
-* [ ] - Home page
-    - [ ] - Starter room search form (check in, check out, etc)
-    - [ ] - Services offered
-    - [ ] - Featured Rooms
-    - [ ] - About Hotel(optional)
-* [ ] - Show booking options page (with same form as home but with additional details)
-* [ ] - Reservation form to confirm details (multipart)
-    - [ ] - Payment form
-    - [ ] - Email receipt generator (optional)
-* [ ] - Rooms browsing page with filters
-* [ ] - Account page with reservation history etc
-* [ ] - User Registration page with multi part form (email confirmation)
-    - [ ] - Optional External authentication providers (google sign in, etc)
-* [ ] - Login page
+* [x] - Home page
+    - [x] - Starter room search form (check in, check out, etc)
+    - [x] - Services offered
+    - [x] - Featured Rooms
+    - [x] - About Hotel
+ * [x] - Login Page
+ * [x] - Registration Page
+* [x] - Rooms browsing page 
+* [x] - Account page with reservation history etc
 
 # Additional tasks
 
